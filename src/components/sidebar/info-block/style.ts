@@ -4,8 +4,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-
-  margin-top: 50px;
 `;
 
 export const Title = styled.span`
@@ -20,6 +18,8 @@ export const Item = styled.div`
   display: flex;
   gap: 20px;
 
+  cursor: pointer;
+
   p {
     font-size: 14px;
     font-weight: 500;
@@ -30,5 +30,6 @@ export const Item = styled.div`
 
 export const Spacer = styled.div`
   border: 0.5px solid var(--cinza-300);
-
+  margin-bottom: 10px;
+  width: 90%;
 `;

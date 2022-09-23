@@ -11,6 +11,8 @@ export const Container = styled.div`
 
   cursor: pointer;
 
+  margin-bottom: 50px;
+
   span {
     width: 100%;
     height: 3px;
