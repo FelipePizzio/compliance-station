@@ -20,6 +20,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: var(--branco);
+    background: var(--cinza-100);
   }
 `;
