@@ -22,4 +22,12 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background: var(--cinza-100);
   }
+
+  main {
+    display: flex;
+
+    section {
+      margin: auto;
+    }
+  }
 `;
