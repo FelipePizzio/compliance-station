@@ -67,6 +67,7 @@ export const FilterContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  gap: 16px;
 
   height: 54px;
 
@@ -106,12 +107,31 @@ export const FilterContainer = styled.div`
   }
 `;
 
+export const DropdownFilter = styled.ul`
+  border: 1px solid var(--cinza-100);
+  border-radius: 5px;
+  width: 89px;
+  height: 32px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+
+  cursor: pointer;
+`;
+
 export const ListHeader = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
 
   height: 54px;
+
+  border-top: 1px solid #e6e6e6;
 
   p {
     color: var(--roxo);
@@ -133,6 +153,8 @@ export const ListItem = styled.div`
 
   height: 54px;
 
+  border-top: 1px solid #e6e6e6;
+
   p {
     color: var(--cinza-700);
     width: 200px;
@@ -149,6 +171,23 @@ export const ListItem = styled.div`
       width: 14px;
       height: 14px;
     }
+  }
+`;
+
+export const ListTotal = styled.div`
+  display: flex;
+  align-items: center;
+
+  padding-left: 30px;
+  height: 54px;
+
+  border-top: 1px solid #e6e6e6;
+
+  p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    color: var(--cinza-700);
   }
 `;
 

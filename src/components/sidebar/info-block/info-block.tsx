@@ -1,5 +1,4 @@
 import React from "react";
-import IconGlobo from 'assets/globe.svg';
 import { Container, Item, Spacer, Title } from "./style";
 
 interface InfoBlockProps {
@@ -8,7 +7,7 @@ interface InfoBlockProps {
 }
 
 interface ContentProps {
-  imgSrc: string;
+  imgSrc: any;
   alt: string;
   name: string;
 }

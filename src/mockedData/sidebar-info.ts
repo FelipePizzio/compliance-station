@@ -1,16 +1,14 @@
-import IconGlobo from 'assets/globe.svg';
-
 export const SideBarInfo = [
   {
     title: 'GERENCIADOR STATION',
     content: [
       {
-        imgSrc: 'assets/globe.svg',
+        imgSrc: require('assets/globe.png'),
         alt: '',
         name: 'Painel Global',
       },
       {
-        imgSrc: 'assets/globe.svg',
+        imgSrc: require('assets/folder.png'),
         alt: '',
         name: 'Painel Detalhado',
       },
@@ -20,17 +18,17 @@ export const SideBarInfo = [
     title: 'GERENCIADOR FORMULÁRIOS',
     content: [
       {
-        imgSrc: 'assets/globe.svg',
+        imgSrc: require('assets/users.png'),
         alt: '',
         name: 'Fornecedores',
       },
       {
-        imgSrc: 'assets/globe.svg',
+        imgSrc: require('assets/forms.png'),
         alt: '',
         name: 'Formulários',
       },
       {
-        imgSrc: 'assets/globe.svg',
+        imgSrc: require('assets/pie_chart.png'),
         alt: '',
         name: 'Estatísticas',
       },
@@ -39,12 +37,12 @@ export const SideBarInfo = [
   {
     content: [
       {
-        imgSrc: 'assets/globe.svg',
+        imgSrc: require('assets/config.png'),
         alt: '',
         name: 'Configurações',
       },
       {
-        imgSrc: 'assets/globe.svg',
+        imgSrc: require('assets/headphones.png'),
         alt: '',
         name: 'Central de Ajuda',
       },

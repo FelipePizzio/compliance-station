@@ -1,15 +1,19 @@
 import React from 'react';
 import IconDelete from 'assets/delete.png';
 import IconSearch from 'assets/search.png';
+import IconFilter from 'assets/filter.png';
+import { FornecedoresInfo } from 'mockedData/fornecedores-info';
 import { 
   BtnAdd, 
   CheckBox, 
   Container, 
+  DropdownFilter, 
   FilterContainer, 
   Header, 
   ListContainer, 
   ListHeader, 
-  ListItem 
+  ListItem, 
+  ListTotal
 } from './style';
 
 const MainList = () => {
@@ -33,7 +37,10 @@ const MainList = () => {
               <img src={IconSearch} alt='Icone de pesquisa' />
             </div>
           </div>
-          <ul></ul>
+          <DropdownFilter>
+            <img src={IconFilter} alt='Icone Filtro' />
+            Filtro
+          </DropdownFilter>
         </FilterContainer>
         <ListHeader>
           <CheckBox type='button' />
@@ -42,17 +49,22 @@ const MainList = () => {
           <p>Data de Criação</p>
           <div />
         </ListHeader>
-        <ListItem>
-          <CheckBox type='button' />
-          <p>Nome</p>
-          <p>Tipo</p>
-          <p>Data</p>
-          <div>
-            <button>
-              <img src={IconDelete} alt="Icone de Lixeira" />
-            </button>
-          </div>
-        </ListItem>
+        {FornecedoresInfo.map(info =>(
+          <ListItem>
+            <CheckBox type='button' />
+            <p>{info.nome}</p>
+            <p>{info.classificacao}</p>
+            <p>{info.data}</p>
+            <div>
+              <button>
+                <img src={IconDelete} alt="Icone de Lixeira" />
+              </button>
+            </div>
+          </ListItem>
+        ))}
+        <ListTotal>
+          <p>{FornecedoresInfo.length} resultados encontrados</p>
+        </ListTotal>
       </ListContainer>
     </Container>
   );
