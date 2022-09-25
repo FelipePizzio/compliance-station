@@ -4,6 +4,12 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @media (max-width: 821px) {
+    &.hideItem {
+      display: none;
+    }
+  }
 `;
 
 export const Title = styled.span`

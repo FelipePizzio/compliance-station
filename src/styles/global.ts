@@ -27,7 +27,7 @@ export const GlobalStyle = createGlobalStyle`
     display: flex;
 
     section {
-      margin: auto;
+      margin: 100px auto;
     }
   }
 

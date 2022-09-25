@@ -35,7 +35,7 @@ const InfoBlock: React.FC<InfoBlockProps> = ({
   };
   
   return (
-    <Container>
+    <Container className={hide ? 'hideItem' : ''}>
       {hide ? (secondTitle && <Title>{secondTitle}</Title>) : (title && <Title>{title}</Title>)}
       {content.map(c => 
         <Item 

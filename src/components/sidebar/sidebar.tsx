@@ -5,14 +5,14 @@ import { SideBarInfo } from "mockedData/sidebar-info";
 import { Container } from "./style";
 
 const Sidebar = () => {
-  const [fullMenu, setFullMenu] = useState(true);
+  const [fullMenu, setFullMenu] = useState(false);
   
   const handleChangeMenu = () => {
     setFullMenu(!fullMenu);
   }
 
   return (
-    <Container className={fullMenu ? 'fullMenu' : ''}>
+    <Container className={fullMenu ? 'fullMenu' : 'hideMenu'} >
       <MenuHamburguer onClick={handleChangeMenu} />
       {SideBarInfo.map(info => 
         <InfoBlock 
