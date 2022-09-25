@@ -17,8 +17,13 @@ export const Title = styled.span`
 export const Item = styled.div`
   display: flex;
   gap: 20px;
+  align-items: center;
 
   cursor: pointer;
+
+  width: 90%;
+  height: 40px;
+  padding-left: 20px;
 
   p {
     font-size: 14px;

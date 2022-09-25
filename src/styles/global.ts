@@ -30,4 +30,14 @@ export const GlobalStyle = createGlobalStyle`
       margin: auto;
     }
   }
+
+  .active {
+    background: var(--cinza-100);
+    border-radius: 5px;
+
+    p {
+      color: var(--roxo);
+      font-weight: 700;
+    }
+  }
 `;

@@ -72,38 +72,41 @@ export const FilterContainer = styled.div`
   height: 54px;
 
   padding-right: 40px;
+`;
 
-  div {
+export const SearchContainer = styled.div`
+  background: var(--cinza-100);
+  border-radius: 25px;
+  border: none;
+
+  width: 233px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+
+  display: flex;
+  justify-content: space-between;
+
+  input {
+    margin-left: 10px;
+    width: 90%;
     background: var(--cinza-100);
-    border-radius: 25px;
     border: none;
 
-    width: 233px;
-    height: 32px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+  }
 
+  div {
     display: flex;
+    background: var(--azul);
+    width: 28px;
+    height: 28px;
     align-items: center;
-
-    display: flex;
-    justify-content: space-between;
-
-    input {
-      margin-left: 10px;
-      width: 90%;
-      background: var(--cinza-100);
-      border: none;
-
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 19px;
-    }
-
-    div {
-      background: var(--azul);
-      width: 28px;
-      height: 28px;
-      justify-content: center;
-    }
+    justify-content: center;
+    border-radius: 25px;
   }
 `;
 
@@ -117,11 +120,73 @@ export const DropdownFilter = styled.ul`
   justify-content: space-around;
   align-items: center;
 
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-
+  span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--azul);
+  }
   cursor: pointer;
+`;
+
+export const ModalDropdown = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  top: 350px;
+  background: var(--branco);
+
+  z-index: 2;
+
+  border: 0.5px solid var(--cinza-100);
+  border-radius: 10px;
+  padding: 10px;
+  width: 224px;
+
+  span {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--cinza-700);
+    margin-bottom: 10px;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 10px;
+
+    height: 36px;
+    width: 99%;
+
+    li {
+      list-style: none;
+    }
+  }
+
+  div.activeFilter {
+    background: #f2f5ff;
+  }
+
+  div:hover {
+    background: #f2f5ff;
+  }
+
+  button:last-child {
+    color: var(--azul);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+
+    background: none;
+    border: none;
+    border-top: 0.5px solid var(--cinza-100);
+
+    height: 40px;
+    cursor: pointer;
+  }
 `;
 
 export const ListHeader = styled.div`
@@ -191,8 +256,7 @@ export const ListTotal = styled.div`
   }
 `;
 
-export const CheckBox = styled.button`
-  border: 1px solid var(--cinza-300);
+export const CheckBox = styled.input`
   background: var(--branco);
 
   height: 16px;
