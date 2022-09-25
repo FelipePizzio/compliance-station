@@ -3,19 +3,23 @@ import { Container, Item, Spacer, Title } from "./style";
 
 interface InfoBlockProps {
   title?: string;
+  secondTitle?: string;
   content: ContentProps[];
+  hide?: boolean;
 }
 
 interface ContentProps {
   imgSrc: any;
   alt: string;
-  name: string;
+  name?: string;
   url: string;
 }
 
 const InfoBlock: React.FC<InfoBlockProps> = ({
-  title, 
-  content
+  title,
+  secondTitle,
+  content,
+  hide
 }) => {
   const [urlAtual, setUrlAtual] = useState('');
 
@@ -32,7 +36,7 @@ const InfoBlock: React.FC<InfoBlockProps> = ({
   
   return (
     <Container>
-      {title && <Title>{title}</Title>}
+      {hide ? (secondTitle && <Title>{secondTitle}</Title>) : (title && <Title>{title}</Title>)}
       {content.map(c => 
         <Item 
           onClick={() => redirect(c.url)}
@@ -40,7 +44,7 @@ const InfoBlock: React.FC<InfoBlockProps> = ({
             'active' : ''}
           >
           <img alt={c.alt} src={c.imgSrc} />
-          <p>{c.name}</p>
+          {!hide && <p>{c.name}</p>}
         </Item>
       )}
       <Spacer />

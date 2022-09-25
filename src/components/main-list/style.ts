@@ -2,6 +2,14 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
   width: 982px;
+
+  @media (max-width: 1080px) {
+    width: 700px;
+  }
+
+  @media (max-width: 800px) {
+    width: 400px;
+  }
 `;
 
 export const Header = styled.div`
@@ -193,6 +201,8 @@ export const ListHeader = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 10px;
+  padding-left: 10px;
 
   height: 54px;
 
@@ -215,6 +225,8 @@ export const ListItem = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 10px;
+  padding-left: 10px;
 
   height: 54px;
 

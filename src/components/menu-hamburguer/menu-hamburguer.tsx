@@ -1,9 +1,9 @@
 import React from "react";
 import { Container } from "./style";
 
-const MenuHamburguer = () => {
+const MenuHamburguer = ({ onClick }) => {
   return(
-    <Container>
+    <Container onClick={onClick}>
       <span></span>
       <span></span>
       <span></span>

@@ -1,6 +1,7 @@
 export const SideBarInfo = [
   {
     title: 'GERENCIADOR STATION',
+    secondTitle: 'STATION',
     content: [
       {
         imgSrc: require('assets/globe.png'),
@@ -18,6 +19,7 @@ export const SideBarInfo = [
   },
   {
     title: 'GERENCIADOR FORMULÁRIOS',
+    secondTitle: 'FORMS',
     content: [
       {
         imgSrc: require('assets/users.png'),
@@ -29,13 +31,13 @@ export const SideBarInfo = [
         imgSrc: require('assets/forms.png'),
         alt: '',
         name: 'Formulários',
-        url: 'formularios', 
+        url: 'formularios',
       },
       {
         imgSrc: require('assets/pie_chart.png'),
         alt: '',
         name: 'Estatísticas',
-        url: 'estatisticas', 
+        url: 'estatisticas',
       },
     ],
   },
@@ -45,7 +47,7 @@ export const SideBarInfo = [
         imgSrc: require('assets/config.png'),
         alt: '',
         name: 'Configurações',
-        url: 'configuracoes', 
+        url: 'configuracoes',
       },
       {
         imgSrc: require('assets/headphones.png'),
